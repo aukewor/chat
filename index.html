@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="header">
+      <img src="kit/header-bar.png" alt="">
+    </div>
+
+    <div class="sitter">
+
+      <button  class="input-bar" onclick="openNav()">
+        <img src="kit/input-bar.png" alt="">
+      </button>
+
+      <div class="content">
+        <img src="kit/emoji-keyboard.png" alt="">
+      </div>
+
+
+      <!-- <div class="before">
+        <img src="kit/before-sitdown.png" alt="">
+      </div> -->
+
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+    var coll = document.getElementsByClassName("input-bar");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+    }
+  </script>
+
+</html>
